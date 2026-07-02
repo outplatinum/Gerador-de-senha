@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas - 5 Algoritmos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Gerador de Senhas</h1>
+            <p class="subtitle">Gere senhas seguras com 5 algoritmos diferentes</p>
+        </header>
+
+        <main>
+            <!-- Configurações -->
+            <section class="config-section">
+                <div class="form-group">
+                    <label for="comprimento">Comprimento da Senha:</label>
+                    <input type="range" id="comprimento" min="8" max="32" value="12">
+                    <span id="comprimentoValue">12</span>
+                </div>
+            </section>
+
+            <!-- Botões dos Algoritmos -->
+            <section class="buttons-section">
+                <h2>Escolha um Algoritmo:</h2>
+                <div class="buttons-grid">
+                    <button class="btn btn-algoritmo" data-algoritmo="1">
+                        <span class="btn-numero">1</span>
+                        <span class="btn-texto">Básico</span>
+                    </button>
+                    <button class="btn btn-algoritmo" data-algoritmo="2">
+                        <span class="btn-numero">2</span>
+                        <span class="btn-texto">Seguro</span>
+                    </button>
+                    <button class="btn btn-algoritmo" data-algoritmo="3">
+                        <span class="btn-numero">3</span>
+                        <span class="btn-texto">Personalizado</span>
+                    </button>
+                    <button class="btn btn-algoritmo" data-algoritmo="4">
+                        <span class="btn-numero">4</span>
+                        <span class="btn-texto">Palavras</span>
+                    </button>
+                    <button class="btn btn-algoritmo" data-algoritmo="5">
+                        <span class="btn-numero">5</span>
+                        <span class="btn-texto">Hexadecimal</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Botão Gerar Todas -->
+            <section class="gerar-todas-section">
+                <button class="btn btn-primary" id="gerarTodas">⚡ Gerar Todas as Senhas</button>
+            </section>
+
+            <!-- Resultados -->
+            <section class="results-section">
+                <div id="resultados" class="resultados-container"></div>
+            </section>
+
+            <!-- Descrição dos Algoritmos -->
+            <section class="info-section">
+                <h2>📚 Sobre os Algoritmos:</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Algoritmo 1: Básico</h3>
+                        <p>Usa random.choice com caracteres alfanuméricos e especiais. Rápido e simples.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Algoritmo 2: Seguro</h3>
+                        <p>Usa secrets (criptograficamente seguro). Melhor opção para senhas críticas.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Algoritmo 3: Personalizado</h3>
+                        <p>Garante pelo menos 1 maiúscula, 1 minúscula, 1 dígito e 1 especial.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Algoritmo 4: Palavras</h3>
+                        <p>Alterna consoantes, vogais e dígitos criando padrão de pronúncia.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Algoritmo 5: Hexadecimal</h3>
+                        <p>Usa caracteres hex (0-9, A-F) intercalados com caracteres especiais.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Gerador de Senhas | Criado por <strong>outplatinum</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
